@@ -3,11 +3,6 @@
   "version": "0.0.1",
   "description": "Mozilla/DeepSpeech with AWS lambda",
   "main": "index.js",
-  "scripts": {
-    "start": "echo \"Error: no start specified\" && exit 1",
-    "build": "echo \"Error: no build specified\" && exit 1",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Bogglian/node-DeepSpeech-with-lambda.git"
@@ -18,10 +13,35 @@
     "stt",
     "speech-to-text"
   ],
-  "author": "rayko <gmj1197@gmail.com> (https://bogglian.github.io/react-DeepSpeech/)",
-  "license": "MIT",
+  "author": "rayko <gmj1197@gmail.com> (https://github.com/Bogglian/node-DeepSpeech-with-lambda)",
+  "license": "MPL-2.0",
   "bugs": {
     "url": "https://github.com/Bogglian/node-DeepSpeech-with-lambda/issues"
   },
-  "homepage": "https://github.com/Bogglian/node-DeepSpeech-with-lambda#readme"
+  "homepage": "https://github.com/Bogglian/node-DeepSpeech-with-lambda#readme",
+  "files": [
+    "README.md",
+    "client.js",
+    "index.js",
+    "lib/*"
+  ],
+  "binary": {
+    "module_name": "deepspeech",
+    "module_path": "./lib/binding/v{version}/{platform}-{arch}/{node_abi}/",
+    "remote_path": "./v{version}/{configuration}/",
+    "package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}.tar.gz",
+    "host": "https://index.taskcluster.net/v1/task/project.deepspeech.tensorflow.pip.v1.0.0-warpctc.arm/artifacts/public/"
+  },
+  "dependencies": {
+    "node-pre-gyp": "0.12.x",
+    "argparse": "1.0.x",
+    "sox-stream": "2.0.x",
+    "memory-stream": "0.0.3",
+    "node-wav": "0.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "install": "node-pre-gyp install --fallback-to-build",
+    "test": "node index.js"
+  }
 }
