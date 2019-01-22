@@ -4,6 +4,11 @@ const dsb = require('./dsBuffer');
 // // for input file
 // const dsf = require('./dsFile');
 
+// // for streaming
+// const EventEmitter = require('events');
+// const dss = require('./dsStreaming');
+// const streamServer = require('./stream');
+
 const s3 = new AWS.S3();
 
 function onError(err) {
@@ -35,6 +40,11 @@ exports.handler = async event => {
     // // for input file
     // body: dsf(event.file, outputGraph, alphabet, lm, trie),
   };
+
+  // // for streaming
+  // const myEmitter = new EventEmitter();
+  // const audioStreamCb = dss(myEmitter, outputGraph, alphabet, lm, trie);
+  // streamServer(audioStreamCb, myEmitter);
 
   if (response.statusCode !== 200) return 1;
   return response.body;
