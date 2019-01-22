@@ -59,3 +59,7 @@ typings/
 
 # next.js build output
 .next
+
+# Models
+models/
+deepspeech-0.4.1-models.tar.gz
