@@ -1,6 +1,9 @@
 const AWS = require('aws-sdk');
 const dsb = require('./dsBuffer');
 
+// // for input file
+// const dsf = require('./dsFile');
+
 const s3 = new AWS.S3();
 
 function onError(err) {
@@ -28,6 +31,9 @@ exports.handler = async event => {
   const response = {
     statusCode: 200,
     body: dsb(event.buffer, outputGraph, alphabet, lm, trie),
+
+    // // for input file
+    // body: dsf(event.file, outputGraph, alphabet, lm, trie),
   };
 
   if (response.statusCode !== 200) return 1;
