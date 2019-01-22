@@ -1,0 +1,27 @@
+{
+  "name": "deepspeech-with-lambda",
+  "version": "0.0.1",
+  "description": "Mozilla/DeepSpeech with AWS lambda",
+  "main": "index.js",
+  "scripts": {
+    "start": "echo \"Error: no start specified\" && exit 1",
+    "build": "echo \"Error: no build specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bogglian/node-DeepSpeech-with-lambda.git"
+  },
+  "keywords": [
+    "node",
+    "deepspeech",
+    "stt",
+    "speech-to-text"
+  ],
+  "author": "rayko <gmj1197@gmail.com> (https://bogglian.github.io/react-DeepSpeech/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bogglian/node-DeepSpeech-with-lambda/issues"
+  },
+  "homepage": "https://github.com/Bogglian/node-DeepSpeech-with-lambda#readme"
+}
