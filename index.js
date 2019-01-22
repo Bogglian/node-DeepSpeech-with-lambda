@@ -1,12 +1,12 @@
-const dsb = require("./dsBuffer");
+const dsb = require('./dsBuffer');
 
 exports.handler = async event => {
   // TODO implement
   const response = {
     statusCode: 200,
-    body: dsb(event.buffer)
+    body: dsb(event.buffer),
   };
 
-  if (respons.statusCode !== 200) return;
+  if (response.statusCode !== 200) return 0;
   return response.body;
 };
