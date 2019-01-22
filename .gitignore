@@ -63,3 +63,6 @@ typings/
 # Models
 models/
 deepspeech-0.4.1-models.tar.gz
+
+# sample audio files
+audio/
